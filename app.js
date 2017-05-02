@@ -1,4 +1,4 @@
-var app = angular.module("apiApp", ["ngRoute"]);
+var app = angular.module("apiApp", ["ngRoute", "geolocation"]);
 
 app.config(["$routeProvider", function ($routeProvider) {
 

@@ -1,15 +1,11 @@
 var app = angular.module("apiApp");
 
-app.controller("HomeController", ["$scope", "weatherService", function ($scope, weatherService) {
+app.controller("HomeController", ["$scope", "weatherService", "geolocation", function ($scope, weatherService, geolocation) {
 
-
-
-
-	weatherService.getLocation().then(function (response) {
-
-		var response = response.data;
-		var latitude = response.latitude;
-		var longitude = response.longitude;
+geolocation.getLocation().then(function(data){
+	$scope.dataObj = {latitude:data.coords.latitude, longitude:data.coords.longitude}
+		var latitude = $scope.dataObj.latitude;
+		var longitude = $scope.dataObj.longitude;
 		weatherService.getWeather(latitude, longitude).then(function (response) {
 			var response = response.data
 			var rain = response.daily.data[0].precipProbability;
