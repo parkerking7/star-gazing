@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="apiApp">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Should I Go Stargazing</title>
+	<link rel="stylesheet" href="styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body>
+	<nav class=" dropdown navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+			 <button type="button" class="navbar-toggle   collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+				<a class="navbar-brand text-center" href="#">Should I Go Star Gazing</a>
+			</div>
+			  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li><a href="/#/home">Home</a></li>
+				<li> <a href="/#/weather">Weather</a></li>
+				<li><a href="/#/stars">Stars</a></li>
+				
+			</ul>
+			</div>
+		</div>
+	</nav>
+
+
+
+	<ng-view></ng-view>
+
+
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="app.js"></script>
+	<script src="service.js"></script>
+	<script src="home/home.js"></script>
+	<script src="weather/weather.js"></script>
+	<script src="Stars/stars.js"></script>
+</body>
+
+</html>
+

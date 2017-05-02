@@ -1,0 +1,15 @@
+<div class="container">
+	<div class="row">
+		<h1 class="forecast-head">Forecast for the Week</h1>
+		<div class= "forecast">
+				<div ng-repeat="day in week"class="col-xs-6 col-sm-3 weather-item">
+					<h3 class="week-day">{{day.day}}</h3>
+					<p class="temp"><b>Temperature High</b><br>{{day.apparentTemperatureMax | number : 0}} °F</p>
+					<p class="temp"><b>Temperature Low</b><br>{{day.apparentTemperatureMin | number : 0}} °F</p>
+					<p class="chance"><b>Rain Chance</b><br>{{day.precipProbability | percentage:0}}</p>
+					<p class="chance"><b>Cloud Cover</b><br>{{day.cloudCover | percentage:0}}</p>
+				</div>
+		</div>
+	</div>
+
+</div>
